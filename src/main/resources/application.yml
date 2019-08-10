@@ -4,3 +4,6 @@ spring:
     password: Windows8
     url: jdbc:mysql://47.94.192.199:3306/skydb
     driver-class-name: com.mysql.cj.jdbc.Driver
+    schema:
+      - classpath:user.sql
+      - classpath:role.sql
