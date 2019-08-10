@@ -1,4 +1,4 @@
-# springboot data jdbc使用专题
+# SpringBoot data jdbc专题
 # 一.入门例子
 1.引入jar包:</br>
 ```
