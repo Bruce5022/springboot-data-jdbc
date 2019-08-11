@@ -257,3 +257,7 @@ public DataSource druid(){
     }
 
 ```
+5.访问druid监控后台
+```
+http://localhost:8080/druid/api.html
+```
