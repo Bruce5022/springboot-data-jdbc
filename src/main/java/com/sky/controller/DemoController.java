@@ -16,7 +16,7 @@ public class DemoController {
 
     @RequestMapping("/home")
     public Object home() throws Exception {
-        List<Map<String, Object>> maps = selectHelper.doQuery("select * from sys_user");
+        List<Map<String, Object>> maps = selectHelper.doQuery("select * from Cs_Parameter");
         for (Map<String, Object> map : maps) {
             System.out.println(MapFormatHelper.getIntValue(map,"id"));
         }

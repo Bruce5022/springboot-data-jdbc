@@ -37,16 +37,16 @@ public class AppTest {
         Connection connection = dataSource.getConnection();
         System.out.println(connection);
         Statement stmt = connection.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from sys_user");
+        ResultSet rs = stmt.executeQuery("select * from Cs_Parameter");
         // 展开结果集数据库
         while (rs.next()) {
             // 通过字段检索
             int id = rs.getInt("id");
-            String email = rs.getString("email");
-            String nickname = rs.getString("nickname");
+            String parameterCode = rs.getString("parameterCode");
+            String parameterName = rs.getString("parameterName");
 
             // 输出数据
-            System.out.println("id: " + id + ",email:" + email + ",nickname" + nickname);
+            System.out.println("id: " + id + ",parameterCode:" + parameterCode + ",parameterName" + parameterName);
         }
         // 完成后关闭
         rs.close();
@@ -56,7 +56,7 @@ public class AppTest {
 
     @Test
     public void testTools() throws Exception {
-        List<Map<String, Object>> maps = selectHelper.doQuery("select * from sys_user");
+        List<Map<String, Object>> maps = selectHelper.doQuery("select * from Cs_Parameter");
         for (Map<String, Object> map : maps) {
             System.out.println(MapFormatHelper.getIntValue(map,"id"));
         }
